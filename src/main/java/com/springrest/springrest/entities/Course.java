@@ -1,11 +1,17 @@
 package com.springrest.springrest.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+    @Id
     private long id;
     private String title;
     private String description;
 
+    //constructors
     public Course(long id, String title, String description) {
         super();
         this.id = id;
@@ -13,10 +19,12 @@ public class Course {
         this.description = description;
     }
 
+    //constructor of super class, default constructor
     public Course() {
         super();
     }
 
+    //getter and setters
     public long getId() {
         return id;
     }
